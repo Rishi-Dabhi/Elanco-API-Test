@@ -3,59 +3,58 @@
   <head>
     <style>
       .button {
-  border: none;
-  color: white;
-  padding: 1px 8px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
+        background-color: #71b5df;
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
   }
   .button1 {
   background-color: white;
   color: black;
   border: 2px solid #4CAF50;
   }
-    </style>
+
+  </style>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      <title>Elanco Application API</title>
+      <title>Consume Rest Api</title>
   </head>
-  
-  <body > 
+  <body>
       <div class="container-fluid p-2 bg-primary text-white text-center">
-          <h1>APPLICATIONS</h1>
+          <h1 style="font-size:60px; color:whitesmoke; margin:10px;">APPLICATIONS</h1>
       </div>
       <div class ="container mt-5">
-          <table>
+          <table class="table">
             <thead>
               <tr>
-                <th>Select Application</th>
-                
+                <th style="font-size: 40px;">Select Application to view details</th>                
               </tr>
             </thead>
             <tbody>
-
               {% for app in applications %}
+
               <tr>
                 <td>
                   <a href="{% url 'select_app_name' app %}" target="_self">
-                   <input  type="submit" name = "appName" value ={{app}}  class ="button button1 " onclick="select_app_name({app})"></input>
+                    <input  type="submit" name = "appName" value ={{app}}  class ="button" onclick="select_app_name({app})" ></input>
                   </a>
-                </td>
+                </td>                
               </tr>
 
               {% endfor %}
-              
             </tbody>
           </table>
       </div>

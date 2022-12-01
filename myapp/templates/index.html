@@ -1,10 +1,32 @@
-<body>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
     
-<div>
-    <h1>Elanco Application </h1>
-    <p>This is my new landing page.</p>
+
+.button {
+    background-color: #71b5df;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div style="background-image: url('https://www.clipartmax.com/png/middle/200-2004658_animal-health-logo-elanco-logo.png');
+background-size: cover; height:580px; padding-top: 80px; text-align: center;">
+    <h1 style="font-size:60px; color:rgba(0, 0, 255, 0.733); margin:10px;">Elanco Application </h1>
+    
     <a href="{% url 'applications' %}"><input  type="submit" name = "appName" value =Applications  class ="button" ></a>
     <a href="{% url 'resources' %}"><input  type="submit" name = "resource" value =Resources  class ="button" ></a>
 
 </div>
 </body>
+</html>

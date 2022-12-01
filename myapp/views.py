@@ -1,5 +1,4 @@
-from django.shortcuts import redirect, render
-from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render
 import requests
 
 def index(request): 
@@ -25,9 +24,4 @@ def select_resource_name(request,res):
     resources_name_details = response.json()
     return render(request,"resourceNameResults.html", {'select_resource_name':resources_name_details})
 
-def maxCost(request):
-    response = requests.get('https://engineering-task.elancoapps.com/api/raw')
-    raw = response.json()
-    cost = max([float(i['Cost']) for i in raw.values()])
-    print("max cost = ",cost)
-    return render(render,"applications.html",{'applications':cost})
+

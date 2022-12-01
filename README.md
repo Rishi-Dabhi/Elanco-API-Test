@@ -1,6 +1,6 @@
 # **Elanco SE Challange - 2022**
 ## Introduction
-- The goal of this project is to make a web based application which can extract data from Elanco API and display on web page.
+- The goal of this project is to make a web based application which can extract data from Elanco API and display on web page.   
 - This application is made using of django and python.
 ## Usage
 - Make sure you have python3 is install and added to system enviroment.
@@ -15,7 +15,7 @@
 > `project-name\Scripts\activate.bat`
 - Django can be installed easily using pip within your virtual environment.
 >`py -m pip install Django`
-- Then copy this **sampleApp folder** and paste it in **Scripts folder**
+- Then copy this files and paste it in under a new folder **sampleApp** under **Scripts folder**.
 - To run this project, you need to cd in to Script folder and run `activate` in cmd.
 - It will activate your virtual enviroment and then **cd into sampleApp**.
 And run this command.
